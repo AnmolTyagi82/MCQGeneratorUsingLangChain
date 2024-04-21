@@ -7,10 +7,12 @@ from dotenv import load_dotenv
 from src.mcq_generator.utils import read_file, get_table_data
 from src.mcq_generator.logger import logging
 
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
+
+load_dotenv()
 
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
